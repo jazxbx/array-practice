@@ -2,6 +2,8 @@
 
 const randomButton = document.querySelector("#random-button");
 const arrayDisplay = document.querySelector("#display-random");
+const showButtons = document.querySelector("#button-container");
+("#display-random");
 let generatedArray = [];
 
 //Random Array Generation
@@ -14,6 +16,8 @@ randomButton.addEventListener("click", () => {
   generatedArray = randomArray();
   // adds class hide-button that hides the button
   randomButton.classList.add("hide-button");
+  //removes the class that hides the container
+  showButtons.classList.remove("hide-button");
   // Update the display with the generated array
   arrayDisplay.textContent = `[${generatedArray.join(", ")}]`;
 });
@@ -43,3 +47,15 @@ bears.addEventListener("click", () => {
   }
   arrayDisplay.textContent = `[${bearArr.join(", ")}]`;
 });
+
+//reverses arr
+
+const reverse = document.querySelector("#reverse");
+reverse.addEventListener("click", () => {
+  // created a shallow copy and mutated that copy
+  const reversed = [...generatedArray].reverse();
+  arrayDisplay.textContent = [`[${reversed.join(", ")}]`];
+  console.log(reversed, generatedArray);
+});
+
+//show highest num
