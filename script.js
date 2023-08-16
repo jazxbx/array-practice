@@ -40,7 +40,6 @@ bears.addEventListener("click", () => {
   let bearArr = [];
   for (let num of generatedArray) {
     bearArr.push("🐻");
-    console.log(bearArr);
   }
   arrayDisplay.textContent = `[${bearArr.join(", ")}]`;
 });
