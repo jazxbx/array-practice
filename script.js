@@ -66,3 +66,17 @@ highestNum.addEventListener("click", () => {
   console.log(highest);
   arrayDisplay.textContent = `${highest}`;
 });
+
+//fizzbuzz
+const fizzbuzz = document.querySelector("#fizzbuzz");
+fizzbuzz.addEventListener("click", () => {});
+
+//reset
+
+const button = document.querySelector("#reset");
+button.addEventListener("click", () => {
+  const randomArray = () =>
+    [...new Array(10)].map(() => Math.ceil(Math.random() * 100));
+  generatedArray = randomArray();
+  arrayDisplay.textContent = `[${generatedArray.join(", ")}]`;
+});
