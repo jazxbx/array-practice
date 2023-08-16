@@ -55,7 +55,14 @@ reverse.addEventListener("click", () => {
   // created a shallow copy and mutated that copy
   const reversed = [...generatedArray].reverse();
   arrayDisplay.textContent = [`[${reversed.join(", ")}]`];
-  console.log(reversed, generatedArray);
+  //   console.log(reversed, generatedArray);
 });
 
 //show highest num
+const highestNum = document.querySelector("#highest");
+highestNum.addEventListener("click", () => {
+  const highest = Math.max(...generatedArray);
+  //   arrayDisplay.textContent = [`[${highest.join(", ")}]`];
+  console.log(highest);
+  arrayDisplay.textContent = `${highest}`;
+});
